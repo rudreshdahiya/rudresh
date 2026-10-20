@@ -73,6 +73,22 @@
   a { color: #0d3b66; text-decoration: underline dotted; }
   .vertical-section-separator { border: none; border-right: 2px dotted #f4d35e; height: 90vh; margin: 0 2rem; }
   .home-section, .blog-section, .projects-section, .reading-section { max-width: 652px; margin: 0 auto; }
+  .post-row time { white-space: nowrap; }
+  .more-work { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+  .mw { border: 1px dashed #0d3b66; padding: .6rem .75rem; }
+  .mw-title { margin: 0; font-weight: 700; color: var(--cobalt-blue, #0d3b66); }
+  .mw-line { margin: .25rem 0 .35rem; font-size: .85rem; line-height: 1.15rem; }
+  .mw-meta { margin: 0; font-size: .75rem; opacity: .75; }
+  @media (max-width: 600px) { .more-work { grid-template-columns: 1fr; } }
+  details.more { margin: 1rem 0 0; }
+  details.more summary { cursor: pointer; list-style: none; text-align: center; font-weight: 700; padding: .6rem .75rem; border: 1px dashed #0d3b66; margin-bottom: .75rem; }
+  details.more summary::-webkit-details-marker { display: none; }
+  details.more summary:hover { background: #f4d35e; }
+  details.more .when-open, details.more[open] .when-closed { display: none; }
+  details.more[open] .when-open { display: inline; }
+  .project-year-tag { flex-wrap: wrap; row-gap: .15rem; }
+  .project-year-tag small { white-space: nowrap; }
+  a.project-tile:not([href]) { cursor: default; }
   input, textarea { border: 1.5px solid #f4d35e; }
   input:focus, textarea:focus { outline: 2px solid #0d3b66; }
   /* No interference with page numbering counter on the top */
@@ -107,15 +123,16 @@
       <div class="home-description">
   <div style="text-align: left;">
   <p>Hi! Welcome to my digital playground.</p>
-   <p> I’m Rudresh, an MBA graduate from SPJIMR with 3.5 years of experience in consulting across CPG, Retail, Healthcare, and Ecommerce. My work sits at the intersection of deep analysis and broad curiosity.</p>
-  <p>To document my evolution from a T-shaped learner (deep expertise in problem-solving + broad curiosity) to a W-shaped practitioner (connecting dots across disciplines). Think of this as a playground for messy drafts, case studies, and experiments that showcase how I tackle complexity.</p>
-  <p>I use GenAI and agentic tools not to replace my thinking, but to amplify it. You’ll find an example of this approach <a href="https://docs.google.com/document/d/179DmwrXNjFCGwEueVSgzpjIcgikYqzQqw59MU_M_xsI/edit?usp=sharing" target="_blank" rel="noopener">here</a>.</p> 
+   <p>I’m Rudresh, a Product Manager at Anand Rathi Group – Lxme, building a wealth platform for first-generation women investors.</p>
+  <p>Most of my work starts with a why. Why aren’t SIPs actually running? Which farmer actually farmed better? Why does a shop’s first online sale take so long? Each answer has led me to the next question, with Walmart × Flipkart, HUL, the World Bank, SNCF and a pickle brand I started in rural Bihar.</p>
+  <p>This is where I keep the messy drafts, case studies and experiments that come out of those questions. The longer story is on the <a href="about.html">me</a> page.</p>
+  <p>I use GenAI and agentic tools to think faster, not to think for me. I write about what I’m learning on Substack, you can read it <a href="https://substack.com/@rudreshdahiya" target="_blank" rel="noopener">here</a>.</p>
         <p class="center" id="scroll-indicator-for-mobile"><small>→ there's fun stuff this way →</small></p>
       </div>
     </div>
 
       <div class="footer-links" style="padding: 1em 0;">
-      <a class="footer-social-links" href="mailto:pgpm2024.rudresh@spjimr" target="_blank" rel="noreferrer" title="email"
+      <a class="footer-social-links" href="mailto:ya.rudresh@gmail.com" target="_blank" rel="noreferrer" title="email"
         aria-label="email">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path fill="none" d="M0 0h24v24H0V0z"></path>
@@ -156,77 +173,161 @@
     <div class="projects">
       <div class="grid-col">
         <div class="project">
-          <a class="project-tile" href="DPI_Post.html">
-            <h3>DPI can’t hear you until it speaks your language"</h3>
+          <a class="project-tile">
+            <h3>UPI Autopay before SIP</h3>
             <small class="description">
-              <span>How a missing digital layer can transform India?</span>
-              <span class="project-content"> It is not just about translation, it's about making comprehension itself a public good, unlocking access to services like credit and healthcare in every Indian’s native tongue. 
-              </span>
+              <span><strong>Why weren’t SIPs actually running?</strong></span>
+              <span class="project-content">Most people starting a SIP never finished the eNACH mandate, so the SIP existed but nothing debited. Swapped in UPI Autopay, one tap in an app they already trust. More SIPs went live and stayed live, and AUM grew with them.</span>
             </small>
-            <span class="project-year-tag"><small>12 July</small> • <small>Digital Public Infra</small></span>
+            <span class="project-year-tag"><small>Anand Rathi Group – Lxme</small> • <small>2025</small> • <small>Conversion</small></span>
           </a>
         </div>
         <div class="project">
-          <a class="project-tile" href="https://www.notion.so/From-Price-Wars-to-Plantable-How-BioQ-is-ITC-s-boost-to-Classmate-1e2adda53a8a8004894fef7bf48cc409?pvs=4">
-            <h3>ITC's Classmate</h3>
+          <a class="project-tile">
+            <h3>Walmart Vriddhi</h3>
             <small class="description">
-              <span>How to deal with pricing pressure from regional competitors? </span>
-              <span class="project-content">
-A strategy for ITC Classmate to unlock new growth via acquisition of BioQ, focusing on plantable seed paper notebooks and the corporate gifting market.</span>
+              <span><strong>Why does a shop’s first online sale take so long?</strong></span>
+              <span class="project-content">These were offline shopkeepers with no idea how Flipkart works. Trained them on listing and positioning. Onboarding to first sale got much faster, and order values went up because sellers knew how to present their products.</span>
             </small>
-            <span class="project-year-tag"><small>21 May</small> • <small>Acquistion</small></span>
+            <span class="project-year-tag"><small>Walmart × Flipkart</small> • <small>DRIS</small> • <small>2022–23</small> • <small>Marketplace growth</small></span>
           </a>
         </div>
         <div class="project">
-          <a class="project-tile" href="https://www.notion.so/Rethinking-Horlicks-through-cognitive-resilience-for-India-s-exam-aspirants-1e2adda53a8a808aa97becc0ca3e6f2b">
-            <h3>HUL's Horlicks</h3>
+          <a class="project-tile">
+            <h3>Let’s Pickle!</h3>
             <small class="description">
-              <span>Cognitive resilience as a new distribution</span>
-              <span class="project-content">
-A proposal for Unilever's Horlicks: "MindStream"—a premium sub-brand for India's exam aspirants, focused on cognitive resilience and academic stress.</span>
+              <span><strong>Why is the surplus going to waste?</strong></span>
+              <span class="project-content">Farmers’ extra produce was being thrown out or sold cheap. Turned it into pickles with SEWA Bharat’s women’s collective and sold online and offline. Got our capital back and won the 3M-CII award.</span>
             </small>
-            <span class="project-year-tag"><small>28 April</small> • <small>Product Development</small></span>
+            <span class="project-year-tag"><small>SEWA Bharat</small> • <small>SBI YFI</small> • <small>2020–21</small> • <small>0→1 & P&amp;L</small></span>
+          </a>
+        </div>
+        <div class="project">
+          <a class="project-tile">
+            <h3>Station Demand Study</h3>
+            <small class="description">
+              <span><strong>What does a busy station actually need?</strong></span>
+              <span class="project-content">Surveyed commuters on what was missing and how they got to and from the station. Top asks: healthy food, a medicine shop and a shuttle to the nearest metro.</span>
+            </small>
+            <span class="project-year-tag"><small>SNCF</small> • <small>REACH</small> • <small>2019–20</small> • <small>User research</small></span>
           </a>
         </div>
       </div>
       <div class="grid-col">
         <div class="project">
-          <a class="project-tile" href="https://www.notion.so/Food-is-about-emotions-Radical-honesty-wants-to-be-The-Whole-Truth-Foods-new-value-1eeadda53a8a80008ab0c43593177f60?source=copy_link">
-            <h3>The Whole Truth Foods</h3>
+          <a class="project-tile">
+            <h3>Self-serve KYC</h3>
             <small class="description">
-              <span>What comes after clean labels becomes saturated?</span>
-              <span class="project-content">
-A strategy for TWT to evolve from ingredient transparency to emotional honesty, tapping into stress-driven snacking with a mental wellness platform that builds a deeper, premium connection consumers.
-              </span>
+              <span><strong>Why does KYC need our team on the phone?</strong></span>
+              <span class="project-content">Opening an account meant our team chasing users for details over several check-ins. Rebuilt it so users finish KYC themselves, in one sitting. No more follow-up calls.</span>
             </small>
-            <span class="project-year-tag"><small>19 June</small> • <small>Brand Evolution</small></span>
+            <span class="project-year-tag"><small>Anand Rathi Group – Lxme</small> • <small>2025</small> • <small>Activation</small></span>
           </a>
         </div>
         <div class="project">
-          <a class="project-tile" href="https://www.notion.so/Tata-Consumer-Products-Organics-India-1de7e6d439a780489301cc56f8b84ef3">
-            <h3>Tata Consumer Product's Organics India</h3>
+          <a class="project-tile">
+            <h3>Farmer Payouts</h3>
             <small class="description">
-              <span>How to build a health OS as a moat?</span>
-              <span class="project-content">
-A proposal for ORGANIC INDIA to partner with wearables & Tata Neu pharma for new product development, leveraging deep customer understanding and HIPAA-compliant data architecture.</span>
+              <span><strong>Which farmer actually farmed better?</strong></span>
+              <span class="project-content">Payouts ran on surveys, and surveys are opinions. Counted how often each plot’s satellite pixels changed colour: every sowing, growing and harvest shows up. Opinions became facts, and payouts followed real farm input costs.</span>
             </small>
-            <span class="project-year-tag"><small>14 May</small> • <small>Marketing Mix</small></span>
+            <span class="project-year-tag"><small>HUL</small> • <small>DRIS</small> • <small>2022–23</small> • <small>Metric design</small></span>
           </a>
         </div>
         <div class="project">
-          <a class="project-tile" href="https://www.notion.so/IDFC-First-Business-Lending-BL-1dd7e6d439a780cba884dc5edc69a894">
-            <h3>IDFC First' Business Lending</h3>
+          <a class="project-tile">
+            <h3>Bus-Space Freight</h3>
             <small class="description">
-              <span>Using alternate data to predict future cashflows</span>
-              <span class="project-content">
-Exploring SME sector empowerment, digital-first experiences, and innovative risk mitigation.</span>
+              <span><strong>Is there an empty seat for our parcels?</strong></span>
+              <span class="project-content">Freight was eating the pickle margins. Noticed not every RedBus seat gets booked, so empty space on intercity buses became our freight, far cheaper than couriers.</span>
             </small>
-            <span class="project-year-tag"><small>24 April</small> • <small>Feature Evaluation</small></span>
+            <span class="project-year-tag"><small>SBI YFI</small> • <small>2020–21</small> • <small>Unit economics</small></span>
+          </a>
+        </div>
+        <div class="project">
+          <a class="project-tile">
+            <h3>Education Outcomes</h3>
+            <small class="description">
+              <span><strong>What actually gets a student a job?</strong></span>
+              <span class="project-content">Across schools in Odisha, compared marks, attendance and teaching against who got employed. Marks mattered less than expected. Co-curricular participation and teacher training made the difference.</span>
+            </small>
+            <span class="project-year-tag"><small>Lend A Hand India</small> • <small>REACH</small> • <small>2019–20</small> • <small>Outcome measurement</small></span>
           </a>
         </div>
       </div>
     </div>
-    
+
+    <details class="more" id="more-work">
+      <summary><span class="when-closed">+ 13 more projects</span><span class="when-open">− Show fewer</span></summary>
+    <div class="more-work">
+      <div class="mw">
+        <p class="mw-title">Savings challenges</p>
+        <p class="mw-line">Streaks, SafeGold and savings challenges that keep first-time investors coming back.</p>
+        <p class="mw-meta">Anand Rathi Group – Lxme • Retention</p>
+      </div>
+      <div class="mw">
+        <p class="mw-title">UPI &amp; bill payments</p>
+        <p class="mw-line">Owned the payments charter: UPI and Setu bill payments.</p>
+        <p class="mw-meta">Anand Rathi Group – Lxme • Payments infrastructure</p>
+      </div>
+      <div class="mw">
+        <p class="mw-title">FD-backed credit card</p>
+        <p class="mw-line">Took an FD-backed card from 0 to 1 with Credilio and SBM Bank.</p>
+        <p class="mw-meta">Anand Rathi Group – Lxme • Partnerships</p>
+      </div>
+      <div class="mw">
+        <p class="mw-title">Donor subscriptions</p>
+        <p class="mw-line">Turned Save the Children’s one-time donors into monthly givers.</p>
+        <p class="mw-meta">Save the Children · DRIS • Lifecycle monetisation</p>
+      </div>
+      <div class="mw">
+        <p class="mw-title">IDH InStep</p>
+        <p class="mw-line">Made the water and labour data behind each garment verifiable across countries, so H&amp;M and Zara shoppers could trust what they buy is more conscious, helping the brands premiumise.</p>
+        <p class="mw-meta">IDH · DRIS • Brand trust &amp; traceability</p>
+      </div>
+      <div class="mw">
+        <p class="mw-title">EZ-NCD</p>
+        <p class="mw-line">Connected local health centres to hospitals and kept patient histories for chronic diseases.</p>
+        <p class="mw-meta">Dell Foundation · DRIS • Health workflows</p>
+      </div>
+      <div class="mw">
+        <p class="mw-title">Nagaland education</p>
+        <p class="mw-line">Digitised exam conduct, grading and classes for Nagaland’s schools.</p>
+        <p class="mw-meta">World Bank · DRIS • Public-sector systems</p>
+      </div>
+      <div class="mw">
+        <p class="mw-title">mForm</p>
+        <p class="mw-line">A configurable data platform with offline sync, used by HUL, Adani and Shiv Nadar.</p>
+        <p class="mw-meta">DRIS • B2B SaaS platform</p>
+      </div>
+      <div class="mw">
+        <p class="mw-title">Tier-3 growth</p>
+        <p class="mw-line">Won small-town buyers for Let’s Pickle! through Instagram and WhatsApp.</p>
+        <p class="mw-meta">SBI YFI • Acquisition</p>
+      </div>
+      <div class="mw">
+        <p class="mw-title">Seed for 3 businesses</p>
+        <p class="mw-line">Pitched SBI with financial models and got funding to launch three ventures.</p>
+        <p class="mw-meta">SBI YFI • Business case</p>
+      </div>
+      <div class="mw">
+        <p class="mw-title">Funder dashboards</p>
+        <p class="mw-line">Designed surveys, KPIs and dashboards that showed funders their programme impact.</p>
+        <p class="mw-meta">REACH • Data products</p>
+      </div>
+      <div class="mw">
+        <p class="mw-title">GenAI bot</p>
+        <p class="mw-line">Built a GenAI bot for a live client, with users paying monthly.</p>
+        <p class="mw-meta">SPJIMR • AI products</p>
+      </div>
+      <div class="mw">
+        <p class="mw-title">HUL × ONDC</p>
+        <p class="mw-line">Strategy to bring HUL’s small retailers onto ONDC through the Shikhar app.</p>
+        <p class="mw-meta">SPJIMR • Ecosystem strategy</p>
+      </div>
+    </div>
+    </details>
+
   </section>
   
 
@@ -237,121 +338,210 @@ Exploring SME sector empowerment, digital-first experiences, and innovative risk
     
     <div class="blog-section">
       <div class='section-title'>
-        <h2>Blog</h2>
-        <a class="section-button" href="https://medium.com/@rudresh.dahiya">View All</a>
+        <h2>Musings</h2>
+        <a class="section-button" href="https://substack.com/@rudreshdahiya">View All</a>
       </div>
       <div class="posts">
+        <div class="post-row">
+          <a href="https://www.linkedin.com/posts/rudresh-dahiya_rapido-added-a-sound-for-when-your-ride-books-ugcPost-7504241055874260992-M7uz/" class="home-post-title">Rapido added a sound for when your ride books</a>
+          <time>Sep 11, 2026 · LinkedIn</time>
+        </div>
+
+        <div class="post-row">
+          <a href="https://www.linkedin.com/posts/rudresh-dahiya_got-a-call-from-someone-at-nobrokercom-this-share-7494113038132936704-UZ2a/" class="home-post-title">AI Voice Agents Struggle to Sound Human</a>
+          <time>Aug 14, 2026 · LinkedIn</time>
+        </div>
+
+        <div class="post-row">
+          <a href="https://www.linkedin.com/posts/rudresh-dahiya_when-you-anxiously-pull-to-refresh-because-ugcPost-7488270104464584704-57UQ/" class="home-post-title">When you anxiously pull to refresh…</a>
+          <time>Jul 29, 2026 · LinkedIn</time>
+        </div>
+
+        <div class="post-row">
+          <a href="https://www.linkedin.com/posts/rudresh-dahiya_as-a-product-manager-about-90-of-the-job-share-7486701429764657154-_G2x/" class="home-post-title">Managing Stakeholders with Emotional Intelligence</a>
+          <time>Jul 25, 2026 · LinkedIn</time>
+        </div>
+
+        <div class="post-row">
+          <a href="https://www.linkedin.com/posts/rudresh-dahiya_productmanagement-productmetrics-datadriven-share-7476897770805768192-YlfG/" class="home-post-title">Choosing the Right Metric: Avoiding Noise and Focusing on Behaviour</a>
+          <time>Jun 28, 2026 · LinkedIn</time>
+        </div>
+
+        <div class="post-row">
+          <a href="https://www.linkedin.com/posts/rudresh-dahiya_productmanagement-userbehavior-uxdesign-share-7474420677148798976-XUk1/" class="home-post-title">Why Your Save Lists Are a Graveyard of Unread Content</a>
+          <time>Jun 21, 2026 · LinkedIn</time>
+        </div>
+
         
       <div class="post-row">
           <a href="https://medium.com/@rudresh.dahiya/how-social-comparison-is-reshaping-indian-savings-ce256e1f5d0c" class="home-post-title">How Social Comparison is Reshaping Indian Savings</a>
-          <time>Jun 28, 2025</time>
+          <time>Jun 28, 2025 · Medium</time>
         </div>      
         
         
         <div class="post-row">
           <a href="https://medium.com/@rudresh.dahiya/til-1-knowledge-consumption-vs-digestion-751802dc9efc" class="home-post-title">Why Most People Forget What They Learn</a>
-          <time>Mar 29, 2025</time>
+          <time>Mar 29, 2025 · Medium</time>
         </div>
         
         <div class="post-row">
           <a href="https://medium.com/@rudresh.dahiya/language-funding-4c6b181301e9" class="home-post-title">How TikTok and Instagram Bankroll Gen Z’s Digital Dialect?</a>
-          <time>Nov 10, 2024</time>
+          <time>Nov 10, 2024 · Medium</time>
         </div>
         
         <div class="post-row">
           <a href="https://medium.com/@rudresh.dahiya/no-code-autodidact-f3885f851ed4" class="home-post-title">How GenAI is Breeding a New Wave of Self-Taught Mavericks</a>
-          <time>Sep 30, 2024</time>
+          <time>Sep 30, 2024 · Medium</time>
         </div>
         
         <div class="post-row">
+          <a href="https://recommentary.substack.com/p/recommentary-newsletter-january-2" class="home-post-title">Recommentary Newsletter — January #2</a>
+          <time>Jan 21, 2024 · Substack</time>
+        </div>
+
+        <div class="post-row">
+          <a href="https://recommentary.substack.com/p/recommentary-newsletter-january-1" class="home-post-title">Recommentary Newsletter — January #1</a>
+          <time>Jan 6, 2024 · Substack</time>
+        </div>
+
+        <div class="post-row">
           <a href="https://medium.com/@rudresh.dahiya/a-momo-tivational-analysis-81c02e3e7b20" class="home-post-title">Why Every Delhi Metro Exit Sells Momos and ‘Rich Dad Poor Dad’</a>
-          <time>Oct 24, 2023</time>
+          <time>Oct 24, 2023 · Medium</time>
         </div>
         
         <div class="post-row">
           <a href="https://medium.com/@rudresh.dahiya/navaratri-puja-x-sunburn-14b27ef3c1ef" class="home-post-title">The Unlikely Soundtrack of Delhi’s Navaratri 2023</a>
-          <time>Oct 17, 2023</time>
+          <time>Oct 17, 2023 · Medium</time>
         </div>
          
         <div class="post-row">
+          <a href="https://recommentary.substack.com/p/introducing-recommentary-your-source" class="home-post-title">Introducing Recommentary</a>
+          <time>Sep 19, 2023 · Substack</time>
+        </div>
+
+        <div class="post-row">
           <a href="https://medium.com/@rudresh.dahiya/application-of-tech4good-in-livelihoods-3ae5a738505f" class="home-post-title">Application of Tech4Good in Livelihoods</a>
-          <time>Feb 7, 2023</time>
+          <time>Feb 7, 2023 · Medium</time>
         </div>
 
         <div class="post-row">
           <a href="https://medium.com/@rudresh.dahiya/data-overwhelming-in-the-indian-social-sector-part-ii-data-journey-c26805db86ad" class="home-post-title">Data Overwhelming in the Indian Social Sector — Part II</a>
-          <time>Feb 1, 2023</time>
+          <time>Feb 1, 2023 · Medium</time>
         </div> 
         
         
         <div class="post-row">
           <a href="https://medium.com/@rudresh.dahiya/data-overwhelming-in-the-indian-social-sector-part-i-data-sources-5082c0b10fcf" class="home-post-title">Data Overwhelming in the Indian Social Sector — Part I</a>
-          <time>Jan 20, 2023</time>
+          <time>Jan 20, 2023 · Medium</time>
         </div>
 
          <div class="post-row">
           <a href="https://medium.com/@rudresh.dahiya/reconnecting-the-dots-lessons-for-every-day-from-tech4good-4e2dd43f031b" class="home-post-title">Reconnecting the dots: Lessons for every day from Tech4Good</a>
-          <time>Jan 7, 2023</time>
+          <time>Jan 7, 2023 · Medium</time>
         </div>
 
            <div class="post-row">
           <a href="https://medium.com/@rudresh.dahiya/menstrual-hygiene-talk-about-whats-not-comfortable-countercurrents-part-3-aeeb4e80c43b" class="home-post-title">Talk About What’s Not Comfortable! — Part 3</a>
-          <time>July 24, 2022</time>
+          <time>July 24, 2022 · Medium</time>
         </div>
        <div class="post-row">
           <a href="https://medium.com/@rudresh.dahiya/menstrual-hygiene-talk-about-whats-not-comfortable-countercurrents-part-2-f7aac07e1588" class="home-post-title">Talk About What’s Not Comfortable!  — Part 2</a>
-          <time>Jan 22, 2022</time>
+          <time>Jan 22, 2022 · Medium</time>
         </div>
 
          <div class="post-row">
           <a href="https://medium.com/@rudresh.dahiya/menstrual-hygiene-talk-about-whats-not-comfortable-countercurrents-part-1-7ed33581e933" class="home-post-title">Talk About What’s Not Comfortable!  — Part 1</a>
-          <time>Feb 15, 2021</time>
+          <time>Feb 15, 2021 · Medium</time>
         </div>
 
          <div class="post-row">
           <a href="https://medium.com/@rudresh.dahiya/teachers-nourishers-in-the-age-of-data-c8d5fdd5550d" class="home-post-title">Teachers & Nourishers in the Age of Data</a>
-          <time>Feb 1, 2020</time>
+          <time>Feb 1, 2020 · Medium</time>
         </div>
 
 
         
       </div>
+
+      <hr class="horizontal-section-separator"/>
+      <div class="section-title">
+        <h3>Teardowns</h3>
+      </div>
+      <div class="projects">
+        <div class="grid-col">
+          <div class="project">
+            <a class="project-tile" href="DPI_Post.html">
+              <h3>DPI can’t hear you until it speaks your language"</h3>
+              <small class="description">
+                <span>How a missing digital layer can transform India?</span>
+                <span class="project-content"> It is not just about translation, it's about making comprehension itself a public good, unlocking access to services like credit and healthcare in every Indian’s native tongue. 
+                </span>
+              </small>
+              <span class="project-year-tag"><small>12 July</small> • <small>Digital Public Infra</small></span>
+            </a>
+          </div>
+          <div class="project">
+            <a class="project-tile" href="https://www.notion.so/From-Price-Wars-to-Plantable-How-BioQ-is-ITC-s-boost-to-Classmate-1e2adda53a8a8004894fef7bf48cc409?pvs=4">
+              <h3>ITC's Classmate</h3>
+              <small class="description">
+                <span>How to deal with pricing pressure from regional competitors? </span>
+                <span class="project-content">
+  A strategy for ITC Classmate to unlock new growth via acquisition of BioQ, focusing on plantable seed paper notebooks and the corporate gifting market.</span>
+              </small>
+              <span class="project-year-tag"><small>21 May</small> • <small>Acquistion</small></span>
+            </a>
+          </div>
+          <div class="project">
+            <a class="project-tile" href="https://www.notion.so/Rethinking-Horlicks-through-cognitive-resilience-for-India-s-exam-aspirants-1e2adda53a8a808aa97becc0ca3e6f2b">
+              <h3>HUL's Horlicks</h3>
+              <small class="description">
+                <span>Cognitive resilience as a new distribution</span>
+                <span class="project-content">
+  A proposal for Unilever's Horlicks: "MindStream"—a premium sub-brand for India's exam aspirants, focused on cognitive resilience and academic stress.</span>
+              </small>
+              <span class="project-year-tag"><small>28 April</small> • <small>Product Development</small></span>
+            </a>
+          </div>
+        </div>
+        <div class="grid-col">
+          <div class="project">
+            <a class="project-tile" href="https://www.notion.so/Food-is-about-emotions-Radical-honesty-wants-to-be-The-Whole-Truth-Foods-new-value-1eeadda53a8a80008ab0c43593177f60?source=copy_link">
+              <h3>The Whole Truth Foods</h3>
+              <small class="description">
+                <span>What comes after clean labels becomes saturated?</span>
+                <span class="project-content">
+  A strategy for TWT to evolve from ingredient transparency to emotional honesty, tapping into stress-driven snacking with a mental wellness platform that builds a deeper, premium connection consumers.
+                </span>
+              </small>
+              <span class="project-year-tag"><small>19 June</small> • <small>Brand Evolution</small></span>
+            </a>
+          </div>
+          <div class="project">
+            <a class="project-tile" href="https://www.notion.so/Tata-Consumer-Products-Organics-India-1de7e6d439a780489301cc56f8b84ef3">
+              <h3>Tata Consumer Product's Organics India</h3>
+              <small class="description">
+                <span>How to build a health OS as a moat?</span>
+                <span class="project-content">
+  A proposal for ORGANIC INDIA to partner with wearables & Tata Neu pharma for new product development, leveraging deep customer understanding and HIPAA-compliant data architecture.</span>
+              </small>
+              <span class="project-year-tag"><small>14 May</small> • <small>Marketing Mix</small></span>
+            </a>
+          </div>
+          <div class="project">
+            <a class="project-tile" href="https://www.notion.so/IDFC-First-Business-Lending-BL-1dd7e6d439a780cba884dc5edc69a894">
+              <h3>IDFC First' Business Lending</h3>
+              <small class="description">
+                <span>Using alternate data to predict future cashflows</span>
+                <span class="project-content">
+  Exploring SME sector empowerment, digital-first experiences, and innovative risk mitigation.</span>
+              </small>
+              <span class="project-year-tag"><small>24 April</small> • <small>Feature Evaluation</small></span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <hr class="horizontal-section-separator"/>
-
-    <div class="section-title">
-    <h3>Books</h3>
-  </div>
-  <div id="book-list">
-    <p><strong>Ongoing</strong></p>
-    <small><em>Non-Fiction</em></small>
-    <div class="post-row">
-      <a class="home-post-title" href="https://www.goodreads.com/book/show/55539565-think-again">Think Again - Adam Grant</a>
-    </div>
-    <div class="post-row">
-      <a class="home-post-title" href="https://www.goodreads.com/book/show/123261644-the-industry-handbook">The Industry Handbook - Zebra Learn</a>
-    </div>
-    <div class="post-row">
-      <a class="home-post-title" href="https://www.goodreads.com/book/show/22085568-the-culture-map">The Culture Map - Erin Meyer</a>
-    </div>
-    <div class="post-row">
-      <a class="home-post-title" href="https://www.goodreads.com/book/show/578667.Statistics_Without_Tears">Statistics Without Tears - Daniel T. Willingham</a>
-    </div>
-    <div class="post-row">
-      <a class="home-post-title" href="https://www.goodreads.com/book/show/41138379-how-finance-works">How Finance Works - Mihir Desai</a>
-    </div>
-    <small><em>Fiction</em></small>
-    <div class="post-row">
-      <a class="home-post-title" href="https://www.goodreads.com/book/show/54120408-klara-and-the-sun">Klara and the Sun - Kazuo Ishiguro</a>
-    </div>
-    <div class="post-row">
-      <a class="home-post-title" href="https://www.goodreads.com/book/show/33917.The_Namesake">The Namesake - Jhumpa Lahiri</a>
-    </div>
-    <div class="post-row">
-      <a class="home-post-title" href="https://www.goodreads.com/book/show/54333947-lallan-sweets">Lallan Sweets - Srishti Chaudhary</a>
-    </div>
-  </div>
 
   
       <script src="js/main.40a3d48461d1644e2a54ef7bcd904f0079d2851bf19c53f1a783dd05dfa999ba.js" integrity="sha256-QKPUhGHRZE4qVO97zZBPAHnShRvxnFPxp4PdBd&#43;pmbo=" crossorigin="anonymous"></script>
