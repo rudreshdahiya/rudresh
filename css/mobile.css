@@ -1,0 +1,116 @@
+/* Phone-width fixes, loaded after each page's own styles. */
+
+/* Sub-headings (Teardowns, More work) never pin; only the column title does on desktop. */
+.section-title:has(> h3) { position: static; }
+
+@media screen and (max-width: 572px) {
+  /* Section indicator: a small pill at the bottom instead of a bar over the header. */
+  #home-section-indicator {
+    position: fixed;
+    top: auto;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    padding: 0.35em 0.9em;
+    border-radius: 999px;
+    background: #0d3b66;
+    color: #faf0ca;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    z-index: 10;
+  }
+
+  /* Section titles scroll with the content, so nothing slides underneath them. */
+  .section-title {
+    position: static !important;
+    height: auto;
+    padding: 1rem 0 0.75rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Same 20px side margin on every page: the home columns carry it on the home page,
+     the outer <main> carries it everywhere else, and nothing inside adds more. */
+  .home-section { padding-left: 20px !important; padding-right: 20px !important; }
+  main:not(:has(.home-container)) {
+    box-sizing: border-box;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  main:not(:has(.home-container)) article,
+  main:not(:has(.home-container)) footer,
+  main:not(:has(.home-container)) .article-header,
+  main:not(:has(.home-container)) .article-post,
+  main:not(:has(.home-container)) > div[style] {
+    box-sizing: border-box;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  main img { max-width: 100% !important; height: auto; box-sizing: border-box; }
+  .copyright-footer { flex-wrap: wrap; justify-content: center; text-align: center; gap: 0.25rem; }
+
+  /* Boxes with a fixed minimum width (e.g. the "Previous post" card) shrink to fit. */
+  main div[style*="min-width"] { min-width: 0 !important; max-width: 100% !important; box-sizing: border-box; padding: 1em 1.25em !important; }
+
+  /* Wide tables scroll sideways inside the page instead of stretching it. */
+  main table { display: block; max-width: 100%; overflow-x: auto; }
+
+  /* Cards in one column on phones. */
+  .projects { grid-template-columns: 1fr !important; }
+  .more-work { grid-template-columns: 1fr !important; }
+
+  /* Posts: date and source sit under the title instead of running off the right edge. */
+  .post-row { flex-direction: column; align-items: flex-start; gap: 0.15rem; }
+  .post-row time { font-size: 0.8rem; opacity: 0.8; }
+}
+
+/* Equal-size boxes: every card in a section matches the tallest one.
+   The two desktop columns become one grid, interleaved so each row keeps its pair. */
+.projects { display: grid !important; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 0.75rem; }
+.projects > .grid-col { display: contents !important; }
+  .projects > .grid-col:first-child > .project:nth-child(1) { order: 1; }
+  .projects > .grid-col:last-child > .project:nth-child(1) { order: 2; }
+  .projects > .grid-col:first-child > .project:nth-child(2) { order: 3; }
+  .projects > .grid-col:last-child > .project:nth-child(2) { order: 4; }
+  .projects > .grid-col:first-child > .project:nth-child(3) { order: 5; }
+  .projects > .grid-col:last-child > .project:nth-child(3) { order: 6; }
+  .projects > .grid-col:first-child > .project:nth-child(4) { order: 7; }
+  .projects > .grid-col:last-child > .project:nth-child(4) { order: 8; }
+  .projects > .grid-col:first-child > .project:nth-child(5) { order: 9; }
+  .projects > .grid-col:last-child > .project:nth-child(5) { order: 10; }
+  .projects > .grid-col:first-child > .project:nth-child(6) { order: 11; }
+  .projects > .grid-col:last-child > .project:nth-child(6) { order: 12; }
+  .projects > .grid-col:first-child > .project:nth-child(7) { order: 13; }
+  .projects > .grid-col:last-child > .project:nth-child(7) { order: 14; }
+  .projects > .grid-col:first-child > .project:nth-child(8) { order: 15; }
+  .projects > .grid-col:last-child > .project:nth-child(8) { order: 16; }
+.projects .project { height: 100%; box-sizing: border-box; }
+.projects .project-tile { height: 100%; box-sizing: border-box; }
+.more-work { grid-auto-rows: 1fr; }
+.mw { display: flex; flex-direction: column; }
+.mw-meta { margin-top: auto !important; }
+
+/* Justified body text, with hyphenation so narrow lines don't open wide gaps. */
+#home-bio p:not(.center),
+article p,
+article li,
+.project-content,
+.mw-line,
+blockquote {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+/* Short centred lines stay centred. */
+.article-header p,
+figcaption,
+footer p,
+.copyright-footer p { text-align: center; }

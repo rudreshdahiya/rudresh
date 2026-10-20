@@ -1,0 +1,34 @@
+# Rudresh Dahiya
+
+> Product manager at Anand Rathi Group – Lxme (Mumbai, India) and product consultant. Works across fintech, payments, onboarding, marketplaces, health, education and GenAI. Every project starts with a why: he looks for the real signal behind what people say, gets people who don't usually talk into one room, and fixes the moment users stop trusting a product.
+
+## Who he is
+- Current role: Product Manager, Anand Rathi Group – Lxme (2025–present), a wealth platform for first-generation women investors
+- Previously: Associate Product Manager, Dhwani Rural Information Systems (2022–2023); Consultant, SBI Youth for India (2020–2021); Business Analyst, REACH (2019–2020)
+- Education: MBA, SPJIMR (2023–2025); International Immersion, INSEAD (2025); BSc Honours Chemistry, Kirori Mal College, University of Delhi (2015–2018)
+- Location: Mumbai, India
+- Open to: product manager roles, and product consulting for founders and teams (discovery, metric design, onboarding/KYC and payments flows, 0→1 launches)
+
+## Case studies
+- UPI Autopay before SIP (Lxme, 2025): most new SIPs never finished the eNACH mandate, so nothing debited; switched to one-tap UPI Autopay, more SIPs went live and AUM grew. Skill: conversion.
+- Self-serve KYC (Lxme, 2025): account opening needed the team to chase users over several check-ins; rebuilt it so users finish KYC themselves in one sitting. Skill: activation.
+- Walmart Vriddhi (Walmart × Flipkart via Dhwani, 2022–23): trained offline shopkeepers to list and position products on Flipkart; first sales came faster and order values rose. Skill: marketplace growth.
+- Farmer Payouts (HUL via Dhwani, 2022–23): replaced survey-based payouts with satellite imagery that shows every sowing and harvest; payouts followed facts and farm input costs. Skill: metric design.
+- Let's Pickle! (SBI Youth for India, 2020–21): founded a D2C brand turning farmers' surplus into pickles with SEWA Bharat's women's collective; recovered capital and won the 3M-CII award. Skill: 0→1 and P&L ownership.
+- Bus-Space Freight (SBI Youth for India, 2020–21): used unbooked intercity bus space as freight, far cheaper than couriers. Skill: unit economics.
+- Station Demand Study (SNCF via REACH, 2019–20): surveyed commuters at a busy station; top needs were healthy food, a medicine shop and a metro shuttle. Skill: user research.
+- Education Outcomes (Lend A Hand India via REACH, 2019–20): across schools in Odisha, co-curricular participation and teacher training predicted employment better than marks. Skill: outcome measurement.
+- Also: savings challenges (Streaks, SafeGold), UPI and Setu bill payments, an FD-backed credit card with Credilio and SBM Bank, Save the Children donor subscriptions, IDH InStep traceability for H&M and Zara, EZ-NCD with Dell Foundation, World Bank Nagaland education, mForm B2B SaaS, a GenAI bot with paid subscriptions, HUL × ONDC strategy.
+
+## Pages
+- [Home](https://rudreshdahiya.github.io/rudresh/): intro, case studies, posts and teardowns
+- [About](https://rudreshdahiya.github.io/rudresh/about.html): how he works, career timeline, experience, education
+- [DPI can't hear you until it speaks your language](https://rudreshdahiya.github.io/rudresh/DPI_Post.html): essay on a Language DPI for India
+- [Language DPI tech stack](https://rudreshdahiya.github.io/rudresh/DPI_Post_Table.html)
+
+## Elsewhere
+- LinkedIn: https://www.linkedin.com/in/rudresh-dahiya/
+- Substack: https://substack.com/@rudreshdahiya
+- Medium: https://medium.com/@rudresh.dahiya
+- GitHub: https://github.com/rudreshdahiya
+- Email: ya.rudresh@gmail.com
