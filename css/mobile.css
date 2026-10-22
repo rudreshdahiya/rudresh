@@ -93,6 +93,8 @@
   .projects > .grid-col:first-child > .project:nth-child(8) { order: 15; }
   .projects > .grid-col:last-child > .project:nth-child(8) { order: 16; }
 .projects .project { height: 100%; box-sizing: border-box; }
+.projects > .project-feature { grid-column: 1 / -1; order: 0; }
+.project-feature .project-tile { cursor: pointer; text-decoration: none; }
 .projects .project-tile { height: 100%; box-sizing: border-box; }
 .more-work { grid-auto-rows: 1fr; }
 .mw { display: flex; flex-direction: column; }
