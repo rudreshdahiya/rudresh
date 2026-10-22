@@ -10,7 +10,6 @@
 - Open to: product manager roles, and product consulting for founders and teams (discovery, metric design, onboarding/KYC and payments flows, 0→1 launches)
 
 ## Case studies
-- Paisa Kahan Gaya? (side project, 2026): turns where the month's money went into a film poster (archetype, biggest leak, unplaced money, emergency-fund pace); a Learn section cites NISM and Zerodha Varsity pages and refuses product picks in code before any AI call. Skill: consumer insight and AI trust design. Case study: https://rudreshdahiya.github.io/rudresh/paisa-kahan-gaya.html. App: https://rudreshdahiya.github.io/rudresh/paisa-kahan-gaya/
 - UPI Autopay before SIP (Lxme, 2025): most new SIPs never finished the eNACH mandate, so nothing debited; switched to one-tap UPI Autopay, more SIPs went live and AUM grew. Skill: conversion.
 - Self-serve KYC (Lxme, 2025): account opening needed the team to chase users over several check-ins; rebuilt it so users finish KYC themselves in one sitting. Skill: activation.
 - Walmart Vriddhi (Walmart × Flipkart via Dhwani, 2022–23): trained offline shopkeepers to list and position products on Flipkart; first sales came faster and order values rose. Skill: marketplace growth.
@@ -25,7 +24,6 @@
 - [Home](https://rudreshdahiya.github.io/rudresh/): intro, case studies, posts and teardowns
 - [About](https://rudreshdahiya.github.io/rudresh/about.html): how he works, career timeline, experience, education
 - [DPI can't hear you until it speaks your language](https://rudreshdahiya.github.io/rudresh/DPI_Post.html): essay on a Language DPI for India
-- [Paisa Kahan Gaya? case study](https://rudreshdahiya.github.io/rudresh/paisa-kahan-gaya.html)
 - [Language DPI tech stack](https://rudreshdahiya.github.io/rudresh/DPI_Post_Table.html)
 
 ## Elsewhere
